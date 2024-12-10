@@ -5,24 +5,31 @@
   ],
   "python.analysis.autoImportCompletions": true,
   "workbench.colorCustomizations": {
-    "activityBar.activeBackground": "#3399ff",
-    "activityBar.background": "#3399ff",
-    "activityBar.foreground": "#15202b",
-    "activityBar.inactiveForeground": "#15202b99",
-    "activityBarBadge.background": "#bf0060",
-    "activityBarBadge.foreground": "#e7e7e7",
-    "commandCenter.border": "#e7e7e799",
-    "sash.hoverBorder": "#3399ff",
-    "statusBar.background": "#007fff",
-    "statusBar.foreground": "#e7e7e7",
-    "statusBarItem.hoverBackground": "#3399ff",
-    "statusBarItem.remoteBackground": "#007fff",
-    "statusBarItem.remoteForeground": "#e7e7e7",
-    "titleBar.activeBackground": "#007fff",
-    "titleBar.activeForeground": "#e7e7e7",
-    "titleBar.inactiveBackground": "#007fff99",
-    "titleBar.inactiveForeground": "#e7e7e799"
-  },
+    // Barra de atividades
+    "activityBar.background": "#800020",          // Fundo em bordô
+    "activityBar.activeBackground": "#fd1e1e",
+    "activityBar.foreground": "#ffffff",          // Ícones em branco para contraste
+    "activityBar.inactiveForeground": "#ffffff99", // Ícones inativos com opacidade reduzida
+    "activityBarBadge.background": "#bf0040",     // Fundo dos badges em um tom mais vibrante de bordô
+    "activityBarBadge.foreground": "#ffffff",     // Texto dos badges em branco
+
+    // Barra de status
+    "statusBar.background": "#800020",            // Fundo em bordô
+    "statusBar.foreground": "#ffffff",            // Texto em branco
+    "statusBarItem.hoverBackground": "#9b3a4d",  // Fundo ao passar o mouse, um tom mais claro de bordô
+    "statusBarItem.remoteBackground": "#bf0040", // Status remoto com um tom vibrante de bordô
+    "statusBarItem.remoteForeground": "#ffffff", // Texto remoto em branco
+
+    // Título da janela
+    "titleBar.activeBackground": "#800020",       // Fundo ativo em bordô
+    "titleBar.activeForeground": "#ffffff",       // Texto ativo em branco
+    "titleBar.inactiveBackground": "#80002099",   // Fundo inativo com transparência
+    "titleBar.inactiveForeground": "#ffffff99",   // Texto inativo com opacidade reduzida
+
+    // Outros elementos
+    "commandCenter.border": "#bf0040",            // Bordas com um tom vibrante de bordô
+    "sash.hoverBorder": "#9b3a4d"                 // Bordas ao passar o mouse com tom claro de bordô
+},
   "peacock.color": "#007fff",
   "[python]": {
     "editor.defaultFormatter": "ms-python.black-formatter"
