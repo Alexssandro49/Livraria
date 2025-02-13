@@ -1,9 +1,12 @@
-
 from django.db import models
 from .categoria import Categoria
 from .editora import Editora
 from .autor import Autor
 from uploader.models import Image
+from rest_framework.serializers import ModelSerializer, SlugRelatedField
+
+from uploader.models import Image
+from uploader.serializers import ImageSerializer
 
 class Livro(models.Model):
     titulo = models.CharField(max_length=255)
@@ -23,6 +26,23 @@ class Livro(models.Model):
         blank=True,
         default=None,
     )
+class LivroSerializer(ModelSerializer):
+    capa_attachment_key = SlugRelatedField(
+        source="capa",
+        queryset=Image.objects.all(),
+        slug_field="attachment_key",
+        required=False,
+        write_only=True,
+    )
+    capa = ImageSerializer(
+        required=False,
+        read_only=True
+    )
+
+class LivroListRetrieveSerializer(ModelSerializer):
+    capa = ImageSerializer(required=False)
+    
+
 
     def __str__(self):
         return f"({self.id}) {self.titulo} ({self.quantidade})"
